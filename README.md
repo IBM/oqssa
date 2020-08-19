@@ -13,3 +13,10 @@ The install image conatins following QSC-enabled components (all installed in `/
 - liboqs: All NIST-round 3 competition algorithms
 - openssl: QSC-enabled OpenSSL 1.1.1 library and utility applications
 - curl: Patched curl v7.69.1
+
+## How to download the install image from command line directly
+```
+curl -u <your-github-id>:<your-personal-github-access-token> https://api.github.com/repos/IBM/oqssa/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | wget -i -
+```
+
+### Reference: [How to create your personal github access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
