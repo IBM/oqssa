@@ -16,7 +16,6 @@ The install image conatins following QSC-enabled components (all installed in `/
 
 ## How to download the install image from command line directly
 ```
-curl -u <your-github-id>:<your-personal-github-access-token> https://api.github.com/repos/IBM/oqssa/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | wget -i -
+curl https://api.github.com/repos/IBM/oqssa/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | wget -i -
 ```
 
-### Reference: [How to create your personal github access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
