@@ -10,8 +10,8 @@ In order to demonstrate the utility of QSC algorithms the [Open Quantum Safe (OQ
 
 The install image conatins following QSC-enabled components (all installed in `/opt/oqssa`):
 
-- liboqs: All NIST-round 3 competition algorithms
-- openssl: QSC-enabled OpenSSL 1.1.1 library and utility applications
+- liboqs: All NIST-round 2 competition algorithms
+- openssl: QSC-enabled OpenSSL 1.1.1g library and utility applications
 - curl: Patched curl v7.69.1
 
 ## How to download the install image from command line directly
