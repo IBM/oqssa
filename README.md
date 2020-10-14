@@ -33,7 +33,6 @@ do
   fi
 done
 ```
-{: pre}
 
 * RHEL (Centos/Fedora) dependencies: `libtool automake autoconf cmake(3.5 and above) make openssl ncurses-devel gcc-c++ glibc-locale-source glibc-langpack-enopenssl-devel git wget golang patch perl diffutils`
 
@@ -51,7 +50,6 @@ do
   fi
 done
 ```
-{: pre}
 
 Once prerequiste packages are installed and verified, download scrit and run it:
 
@@ -61,4 +59,3 @@ git clone git@github.com:IBM/oqssa.git
 cd oqssa
 bash build-oqssa.sh
 ```
-{: pre}
