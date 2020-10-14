@@ -79,4 +79,4 @@ cd oqssa
 bash build-oqssa.sh
 ```
 
-Follow steps in [Key Protect Go SDK](https://test.cloud.ibm.com/docs/key-protect?topic=key-protect-quantum-safe-cryptography-tls-introduction#qsc-sdk-application-steps) to use OQSSA with IBM Key Protect Go Client.
+Follow steps in [Key Protect Go SDK](https://cloud.ibm.com/docs/key-protect?topic=key-protect-quantum-safe-cryptography-tls-introduction#qsc-sdk-application-steps) to use OQSSA with IBM Key Protect Go Client.
