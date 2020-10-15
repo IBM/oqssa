@@ -3,14 +3,12 @@
 This is a Quantum Safe Cryptography (QSC)-enabled demonstration package for the IBM Key Protect Go Client.
 
 ## Motivation
-{: #qsc-motivation}
 
 In order to demonstrate the utility of QSC algorithms, the [Open Quantum Safe (OQS) project](https://openquantumsafe.org) provides a collection of QSC algorithms that
 are a part of the [NIST competition](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography) within the [liboqs](https://github.com/open-quantum-safe/liboqs) library.
 [OpenSSL](https://github.com/open-quantum-safe/openssl) and [curl](https://github.com/curl/curl) integrations have been built at the application level to demonstrate how QSC algorithms seamlessly fit into the existing open source security application landscape.
 
 ### Components
-{: #qsc-components}
 
 The build script compiles following QSC-enabled components (all installed in `$HOME/opt/oqssa`):
 
@@ -19,7 +17,6 @@ The build script compiles following QSC-enabled components (all installed in `$H
 - curl: Patched curl v7.69.1
 
 ## How to build and install OQSSA
-{: #install-oqssa}
 
 Note: Compiling and installing OQSSA requires the installation of the following packages:
 
