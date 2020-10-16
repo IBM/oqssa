@@ -7,7 +7,6 @@ cleanup() {
   echo "Cleaning up"
   rm -rf $BUILDDIR/liboqs
   rm -rf $BUILDDIR/curl-${CURL_VERSION}*
-  rm -rf $BUILDDIR/patch-${CURL_VERSION}.*
   rm -rf $BUILDDIR/openssl
 }
 
@@ -42,17 +41,15 @@ cd $BUILDDIR/openssl
 MYCMD=$(LDFLAGS="-Wl,-rpath -Wl,$INSTALLDIR/lib" ./Configure linux-x86_64 -DOQS_DEFAULT_GROUPS=\"prime256v1:secp384r1:secp521r1:X25519:X448:kyber512:kyber768:kyber1024:p256_kyber512:p384_kyber768:p521_kyber1024\" -lm --prefix=$INSTALLDIR &>/dev/null  && make &> /dev/null && make install &> /dev/null)
 exit_on_error $? 
 
-echo "Downloading libcurl"
 # Download libcurl
 cd $BUILDDIR
-CURL_VERSION=7.69.1
+CURL_VERSION=7.73.0
+
+echo "Downloading libcurl version $CURL_VERSION"
 wget -q  https://curl.haxx.se/download/curl-$CURL_VERSION.tar.gz && tar -zxvf curl-$CURL_VERSION.tar.gz > /dev/null
-wget -q  https://raw.githubusercontent.com/open-quantum-safe/oqs-demos/master/curl/patch-$CURL_VERSION.oqs.txt
-exit_on_error $? 
+exit_on_error $?
 
 cd $BUILDDIR/curl-${CURL_VERSION}
-MYCMD=$(patch -p1 < ${BUILDDIR}/patch-${CURL_VERSION}.oqs.txt >/dev/null)
-exit_on_error $? 
 
 echo "Build libcurl with oqs-openssl"
 # Compile libcurl
