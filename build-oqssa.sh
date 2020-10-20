@@ -63,7 +63,7 @@ export PATH=$BUILDDIR/opt/oqssa/bin:$PATH
 
 echo "Downloading IBM Key Protect Go Client"
 cd $BUILDDIR
-git clone --quiet --single-branch https://github.com/IBM/keyprotect-go-client.git 
+git clone --quiet --single-branch --branch qsc-support https://github.com/IBM/keyprotect-go-client.git 
 exit_on_error $? 
 #mkdir $BUILDDIR/keyprotect-go-client/examples
 #cp $BUILDDIR/oqssa/main_qsc.go $BUILDDIR/keyprotect-go-client/examples/
