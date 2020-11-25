@@ -163,7 +163,7 @@ func rootKeyOperations(api *kp.API) {
 func main() {
 	options := getConfigAuthToken()
 	var l kp.Logger
-	api, err := kp.NewWithQSC(options, kp.DefaultTransport(), l, getQSCConfig())
+	api, err := kp.NewWithLogger(options, kp.DefaultTransport(), l, kp.WithQSC(getQSCConfig()))
 	if err != nil {
 		fmt.Println("Error creating kp client with QSC config")
 		return
