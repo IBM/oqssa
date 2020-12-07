@@ -27,7 +27,9 @@ echo "Downloading liboqs and open-quantum-safe openssl"
 # Download liboqs and oqs/openssl
 cd $BUILDDIR
 git clone --quiet --single-branch --branch master https://github.com/open-quantum-safe/liboqs 
-git clone --quiet --single-branch --branch OQS-OpenSSL_1_1_1-stable https://github.com/open-quantum-safe/openssl 
+git clone --quiet --single-branch --branch OQS-OpenSSL_1_1_1-stable https://github.com/open-quantum-safe/openssl
+cd $BUILDDIR/openssl/
+git checkout 67afc13ead43ebf84da848d6bfc8503d88c3b952
 exit_on_error $? 
 
 echo "Build liboqs"
